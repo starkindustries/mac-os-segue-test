@@ -10,10 +10,13 @@ import Cocoa
 
 class MainViewController: NSViewController {
 
+    @IBOutlet weak var mainViewSegueButton: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        let array = [unichar(NSRightArrowFunctionKey)]
+        mainViewSegueButton.keyEquivalent = String(utf16CodeUnits: array, count: 1)
     }
 
     override var representedObject: Any? {

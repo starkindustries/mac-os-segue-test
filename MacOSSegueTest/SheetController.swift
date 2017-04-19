@@ -10,9 +10,14 @@ import Cocoa
 
 class SheetController: NSViewController {
 
+    @IBOutlet weak var dismissButton: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        let array = [unichar(NSLeftArrowFunctionKey)]
+        dismissButton.keyEquivalent = String(utf16CodeUnits: array, count: 1)
+        print("sheet: key equivalent set!")
     }
     
     // http://stackoverflow.com/a/33837816/2179970

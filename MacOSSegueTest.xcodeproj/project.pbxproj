@@ -58,9 +58,9 @@
 			children = (
 				234690C01EA7765200EDB734 /* AppDelegate.swift */,
 				234690C21EA7765200EDB734 /* MainViewController.swift */,
+				234690D31EA78E8B00EDB734 /* SheetController.swift */,
 				234690C41EA7765200EDB734 /* Assets.xcassets */,
 				234690C61EA7765200EDB734 /* Main.storyboard */,
-				234690D31EA78E8B00EDB734 /* SheetController.swift */,
 				234690D11EA77C2200EDB734 /* PushSegue.swift */,
 				234690C91EA7765200EDB734 /* Info.plist */,
 			);
@@ -299,6 +299,7 @@
 				234690CE1EA7765200EDB734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

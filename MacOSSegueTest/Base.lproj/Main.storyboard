@@ -682,7 +682,7 @@
         <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="MacOSSegueTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -699,7 +699,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WX9-X3-d1b">
-                                        <rect key="frame" x="-3" y="-7" width="79" height="32"/>
+                                        <rect key="frame" x="-6" y="-7" width="82" height="32"/>
                                         <buttonCell key="cell" type="push" title="Segue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p0h-iX-pSC">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -709,6 +709,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WX9-X3-d1b" secondAttribute="trailing" id="4KX-cs-Jog"/>
+                                    <constraint firstItem="WX9-X3-d1b" firstAttribute="leading" secondItem="nlx-Bh-jiW" secondAttribute="leading" id="kMk-XG-hww"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -724,6 +728,9 @@
                             <constraint firstItem="nlx-Bh-jiW" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="UHo-e5-S01"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainViewSegueButton" destination="WX9-X3-d1b" id="4Il-5n-A6B"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -749,7 +756,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-dF-kLv">
-                                        <rect key="frame" x="6" y="-7" width="87" height="32"/>
+                                        <rect key="frame" x="-6" y="-7" width="111" height="32"/>
                                         <buttonCell key="cell" type="push" title="Dismiss" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Wi-fq-TNj">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -759,6 +766,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="aM9-dF-kLv" firstAttribute="leading" secondItem="BMj-pR-CUa" secondAttribute="leading" id="YxR-dW-NBJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aM9-dF-kLv" secondAttribute="trailing" id="uVK-KZ-IER"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -774,6 +785,9 @@
                             <constraint firstItem="BMj-pR-CUa" firstAttribute="centerX" secondItem="r8T-M1-5fD" secondAttribute="centerX" id="syS-T8-8bZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="aM9-dF-kLv" id="Vsa-i7-9Tc"/>
+                    </connections>
                 </viewController>
                 <customObject id="y0b-at-AJV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
