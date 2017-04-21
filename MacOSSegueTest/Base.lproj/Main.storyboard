@@ -688,18 +688,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="trailing" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nlx-Bh-jiW">
-                                <rect key="frame" x="205" y="112" width="70" height="46"/>
+                                <rect key="frame" x="203" y="97" width="74" height="76"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGy-pV-4h9">
-                                        <rect key="frame" x="-2" y="29" width="74" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hello World" id="v4l-0c-ct4">
+                                        <rect key="frame" x="-2" y="59" width="78" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello World" id="v4l-0c-ct4">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WX9-X3-d1b">
-                                        <rect key="frame" x="-6" y="-7" width="82" height="32"/>
+                                        <rect key="frame" x="-6" y="23" width="86" height="32"/>
                                         <buttonCell key="cell" type="push" title="Segue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p0h-iX-pSC">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -708,16 +708,28 @@
                                             <segue destination="Dgs-Mm-GST" kind="custom" customClass="PushSegue" customModule="MacOSSegueTest" customModuleProvider="target" id="LkY-hK-R5h"/>
                                         </connections>
                                     </button>
+                                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4us-wi-zN1">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="main focus" drawsBackground="YES" id="ZYR-P2-563">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="WX9-X3-d1b" secondAttribute="trailing" id="4KX-cs-Jog"/>
+                                    <constraint firstAttribute="trailing" secondItem="KGy-pV-4h9" secondAttribute="trailing" id="bad-px-xDC"/>
+                                    <constraint firstItem="KGy-pV-4h9" firstAttribute="leading" secondItem="nlx-Bh-jiW" secondAttribute="leading" id="fNG-sn-My5"/>
                                     <constraint firstItem="WX9-X3-d1b" firstAttribute="leading" secondItem="nlx-Bh-jiW" secondAttribute="leading" id="kMk-XG-hww"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
@@ -729,6 +741,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="helloWorldTextField" destination="KGy-pV-4h9" id="a4t-bO-jTx"/>
+                        <outlet property="mainFocusTextField" destination="4us-wi-zN1" id="srL-ZY-nx3"/>
                         <outlet property="mainViewSegueButton" destination="WX9-X3-d1b" id="4Il-5n-A6B"/>
                     </connections>
                 </viewController>
@@ -745,10 +759,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMj-pR-CUa">
-                                <rect key="frame" x="176" y="112" width="99" height="46"/>
+                                <rect key="frame" x="176" y="97" width="99" height="76"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpy-Ew-d7e">
-                                        <rect key="frame" x="-2" y="29" width="103" height="17"/>
+                                        <rect key="frame" x="-2" y="59" width="103" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sheet Controller" id="zjF-t0-lIV">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -756,15 +770,20 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-dF-kLv">
-                                        <rect key="frame" x="-6" y="-7" width="111" height="32"/>
+                                        <rect key="frame" x="-6" y="23" width="111" height="32"/>
                                         <buttonCell key="cell" type="push" title="Dismiss" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Wi-fq-TNj">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="dismiss" target="Dgs-Mm-GST" id="CDP-xH-hPP"/>
-                                        </connections>
                                     </button>
+                                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyC-wg-QkR">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="sheet focus" drawsBackground="YES" id="FMW-9p-eI4">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aM9-dF-kLv" firstAttribute="leading" secondItem="BMj-pR-CUa" secondAttribute="leading" id="YxR-dW-NBJ"/>
@@ -773,8 +792,10 @@
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
@@ -787,6 +808,7 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="aM9-dF-kLv" id="Vsa-i7-9Tc"/>
+                        <outlet property="sheetFocusTextField" destination="JyC-wg-QkR" id="vyj-Gp-0vz"/>
                     </connections>
                 </viewController>
                 <customObject id="y0b-at-AJV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

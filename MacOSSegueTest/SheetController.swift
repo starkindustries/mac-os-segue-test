@@ -10,20 +10,31 @@ import Cocoa
 
 class SheetController: NSViewController {
 
+    var counter: Int = 0
     @IBOutlet weak var dismissButton: NSButton!
+    @IBOutlet weak var sheetFocusTextField: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        // Setup Key Equivalents
         let array = [unichar(NSLeftArrowFunctionKey)]
         dismissButton.keyEquivalent = String(utf16CodeUnits: array, count: 1)
-        print("sheet: key equivalent set!")
+        
+        // Set Accessibility Label
+        dismissButton.setAccessibilityLabel("DismissButton")
+        
+        // Set button target and action
+        // http://stackoverflow.com/a/25007663/2179970
+        dismissButton.target = nil
+        dismissButton.action = #selector(MainViewController.dismissAction(_:))
+        
+        // Set nextResponder
+        dismissButton.nextResponder = self.parent
     }
     
-    // http://stackoverflow.com/a/33837816/2179970
-    // dismissViewController: Dismisses a presented view controller, 
-    // using the same animator that presented it.
-    @IBAction func dismiss(_ sender: AnyObject) {
-        self.dismissViewController(self)
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        sheetFocusTextField.becomeFirstResponder()
     }
 }
